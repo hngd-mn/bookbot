@@ -4,7 +4,8 @@ def main():
         
     
         file_contents = book.read()
-        word_count = file_contents.split() 
+        word_count = file_contents.split()
+        print("--- Begin report of", book.name, " ---")
         print(len(word_count), " - Words found in the book")
  
 
@@ -27,7 +28,8 @@ def main():
         list_of_letters.sort(reverse=True, key=sort_on)
 
         for let_in_list in list_of_letters:
-            print("The", let_in_list['Name'], "character was found", let_in_list['Count'], "times")
+            print("The letter", let_in_list['Name'], "was found", let_in_list['Count'], "times")
+    print("--- End report ---")
 
 
 main()
